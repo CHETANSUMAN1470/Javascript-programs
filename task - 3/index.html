@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<title>Add-Form</title>
+	<style type="text/css">
+		section{
+			padding: 100px 0;
+		}
+		.form-box{
+			border: 1px solid black;
+			padding: 30px;
+			background-color: lightgoldenrodyellow;
+			margin-bottom: 20px;
+			position: relative;
+			width: 40%;
+			display: inline-block;
+			margin-right: 10px;
+		}
+		input{
+			margin-bottom: 10px;
+		}
+		textarea{
+			margin-bottom: 20px;
+		}
+		.cross{
+			position: absolute;
+			top: -10px;
+			right: 5px;
+			font-size: 30px;
+            cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<button class="btn btn-info" id="btn">Add Form</button>
+				</div>
+				<div class="col-lg-8" id="form">
+					<!-- <input class="inputbox" type="text" name="" placeholder="Name...">
+					<textarea placeholder="Text here..."></textarea>
+					<ol>
+						<li><input type="radio" name=""></li>
+						<li><input type="radio" name=""></li>
+						<li><input type="radio" name=""></li>
+					</ol>
+					<ol>
+						<li><input type="checkbox" name=""></li>
+						<li><input type="checkbox" name=""></li>
+						<li><input type="checkbox" name=""></li>
+					</ol> -->
+				</div>
+			</div>
+		</div>
+	</section>
+
+<script type="text/javascript">
+	let btnn = document.querySelector("#btn");
+	btnn.addEventListener("click" , ()=>{
+		let a = document.createElement("div");
+		a.className = "form-box";
+		let b = document.createElement("input");
+		a.appendChild(b);
+		b.style.width = "100%";
+		b.setAttribute("placeholder" , "Name...");
+		document.getElementById("form").appendChild(a);
+        let c = document.createElement("textarea");
+        c.setAttribute("placeholder" , "Tere here...");
+        c.style.width = "100%";
+		a.appendChild(c);
+        let d = document.createElement("ol");
+        // for (let x = 0; x < 3; x++){
+        // 	let d = document.createElement("ol");
+        //     let e = document.createElement("li");
+        //     let f = document.createElement("input");
+        //     e.appendChild(f);
+        //     d.appendChild(e) 
+        //     a.appendChild(d);
+        //     document.getElementById("form").appendChild(a);
+        //     f.setAttribute("type" , "radio");           
+        // }
+        let e = document.createElement("li");
+        let f = document.createElement("input");
+        let g = document.createElement("li");
+        let h = document.createElement("input");
+        let i = document.createElement("li");
+        let j = document.createElement("input");
+        f.setAttribute("type" , "radio");
+        h.setAttribute("type" , "radio");
+        j.setAttribute("type" , "radio");
+        e.appendChild(f);
+        d.appendChild(e);
+        g.appendChild(h);
+        d.appendChild(g);
+        i.appendChild(j);
+        d.appendChild(i);
+        a.appendChild(d);
+        
+        let k = document.createElement("ol");
+        let l = document.createElement("li");
+        let m = document.createElement("input");
+        let n = document.createElement("li");
+        let o = document.createElement("input");
+        let p = document.createElement("li");
+        let q = document.createElement("input");
+        m.setAttribute("type" , "checkbox");
+        o.setAttribute("type" , "checkbox");
+        q.setAttribute("type" , "checkbox");
+        l.appendChild(m);
+        k.appendChild(l);
+        n.appendChild(o);
+        k.appendChild(n);
+        p.appendChild(q);
+        k.appendChild(p);
+        a.appendChild(k);
+
+        let close = document.createElement("span");
+        let text = document.createTextNode("\u00D7");
+        close.className = "cross";
+        close.appendChild(text);
+        a.appendChild(close);
+        close.addEventListener("click" , ()=>{
+        	a.remove();
+        });
+
+        let btn = document.createElement("input");
+        btn.setAttribute("type" , "submit");
+        a.appendChild(btn);
+
+	});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

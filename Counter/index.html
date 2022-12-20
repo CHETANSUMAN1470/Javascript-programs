@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<title>Counter</title>
+	<style type="text/css">
+		section{
+			padding: 100px 0;
+			background-color: lightblue;
+		}
+		h1{
+			font-size: 80px;
+		}
+		h2{
+			font-size: 80px;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="text-center">
+						<h1>Posts</h1>
+						<h2 class="post">80</h2>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="text-center">
+						<h1>Followers</h1>
+						<h2 class="follower">10000</h2>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="text-center">
+						<h1>Following</h1>
+						<h2 class="following">500</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<script type="text/javascript">
+	let a = document.querySelector(".post");
+	let b = document.querySelector(".follower");
+	let c = document.querySelector(".following");
+
+	let d = 1;
+	setInterval(()=>{
+		if(d < 80){
+		d++;
+		a.innerHTML = d};
+	} , 0.1);
+    
+    let e = 1;
+	setInterval(()=>{
+		if(e < 1000){
+		e++;
+		b.innerHTML = e};
+	} , 0.001);
+    
+    let f = 1;
+	setInterval(()=>{
+		if(f < 500){
+		f++;
+		c.innerHTML = f};
+	} , 0.1);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

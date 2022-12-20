@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<title>Addition</title>
+	<style type="text/css">
+		section{
+			padding: 100px;
+		}
+		input{
+			width: 100%;
+			padding: 0 10px;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="row mb-5 bg-info p-4">
+				<div class="col-lg-4">
+					<input type="number" id="value1" placeholder="Input Value" name="" class="mb-3">
+					<p class="text-center">+</p> 
+					<input type="number" id="value2" name="" placeholder="Input Value"> 
+                </div>
+                <div class="col-lg-2 text-center">
+					<button onclick="addition()" class="mt-5 mx-auto">Submit</button>
+				</div>
+				<div class="col-lg-1">
+					<p class="mt-5">=</p>
+				</div>
+				<div class="col-lg-4">
+					<input id="result" class="mt-5" type="" name="" placeholder="Result">
+				</div>
+			</div>
+			<div class="row mb-5 bg-danger p-4">
+				<div class="col-lg-4">
+					<input type="number" id="input1" placeholder="Input Value" name="" class="mb-3">
+					<p class="text-center">-</p> 
+					<input type="number" id="input2" name="" placeholder="Input Value"> 
+                </div>
+                <div class="col-lg-2 text-center">
+					<button onclick="subtraction()" class="mt-5 mx-auto">Submit</button>
+				</div>
+				<div class="col-lg-1">
+					<p class="mt-5">=</p>
+				</div>
+				<div class="col-lg-4">
+					<input id="result1" class="mt-5" type="" name="" placeholder="Result">
+				</div>
+			</div>
+			<div class="row mb-5 bg-primary p-4">
+				<div class="col-lg-4">
+					<input type="number" id="1" placeholder="Input Value" name="" class="mb-3">
+					<p class="text-center">*</p> 
+					<input type="number" id="2" name="" placeholder="Input Value"> 
+                </div>
+                <div class="col-lg-2 text-center">
+					<button onclick="multiply()" class="mt-5 mx-auto">Submit</button>
+				</div>
+				<div class="col-lg-1">
+					<p class="mt-5">=</p>
+				</div>
+				<div class="col-lg-4">
+					<input id="result2" class="mt-5" type="" name="" placeholder="Result">
+				</div>
+			</div>
+			<div class="row mb-5 bg-warning p-4">
+				<div class="col-lg-4">
+					<input type="number" id="value3" placeholder="Input Value" name="" class="mb-3">
+					<p class="text-center">/</p> 
+					<input type="number" id="value4" name="" placeholder="Input Value"> 
+                </div>
+                <div class="col-lg-2 text-center">
+					<button onclick="division()" class="mt-5 mx-auto">Submit</button>
+				</div>
+				<div class="col-lg-1">
+					<p class="mt-5">=</p>
+				</div>
+				<div class="col-lg-4">
+					<input id="result3" class="mt-5" type="" name="" placeholder="Result">
+				</div>
+			</div>
+		</div>
+	</section>
+
+<script type="text/javascript">
+
+	function addition(){
+           let a, b, c;
+           a = Number(document.getElementById("value1").value);
+           b = Number(document.getElementById("value2").value);
+           c = a + b;
+
+           if (a === '' && b === ''){
+           	alert("Please enter value");
+           }else{
+           	   document.getElementById("result").value = c;
+           }
+           document.getElementById("result").value =  c;
+	}
+
+	function subtraction(){
+           let a, b, c;
+           a = Number(document.getElementById("input1").value);
+           b = Number(document.getElementById("input2").value);
+           c = a - b;
+
+           if (a ==='' && b ===''){
+			alert("Please enter value");
+			}else{
+				document.getElementById("result1").value = c;
+			}
+
+           document.getElementById("result1").value = c;
+	}
+
+	function multiply(){
+           let a, b, c;
+           a = Number(document.getElementById("1").value);
+           b = Number(document.getElementById("2").value);
+           c = a * b;
+
+           if (a === '' && b === ''){
+           	alert("Please enter value");
+           }else{
+           	document.getElementById("result2").value = c;
+           }
+           document.getElementById("result2").value =  c;
+	}
+
+	function division(){
+           let a, b, c;
+           a = Number(document.getElementById("value3").value);
+           b = Number(document.getElementById("value4").value);
+           c = a / b;
+
+           if (a === '' && b === ''){
+           	alert("Please enter value");
+           }else{
+           	   document.getElementById("result3").value = c;
+           }
+           document.getElementById("result3").value =  c;
+	}
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
